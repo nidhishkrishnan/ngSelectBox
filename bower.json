@@ -1,7 +1,7 @@
 {
   "name": "ngSelectBox",
   "main": "ngSelectBox.js",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/nidhishkrishnan/ngSelectBox",
   "authors": [
     "nidhishkrishnan"
