@@ -1,0 +1,24 @@
+{
+  "name": "ngSelectBox",
+  "main": "ngSelectBox.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nidhishkrishnan/ngSelectBox",
+  "authors": [
+    "allaud"
+  ],
+  "description": "An Advanced AngularJS directive for drop-down list",
+  "keywords": [
+    "dropdown",
+    "select",
+    "angular",
+    "selectbox"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
