@@ -1,26 +1,18 @@
 {
   "name": "ngSelectBox",
-  "description": "An Advanced AngularJS directive for drop-down list",
   "version": "1.0.0",
+  "description": "An Advanced AngularJS directive for drop-down list",
   "main": "ngSelectBox.js",
-  "author": "Nidhish Krishnan <nidhishkrishnan@gmail.com>",
-  "keywords": [
-    "dropdown",
-    "select",
-    "angular",
-    "selectbox"
-  ],
-  "maintainers": [
-    {
-      "name": "Nidhish Krishnan",
-      "website": "http://www.nidhishkrishnan.com/"
-    }
-  ],
-  "dependencies": {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
     "angular": ">=1.2.0"
   },
-  "scripts": {
-    "test": "grunt test --verbose"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nidhishkrishnan/ngSelectBox.git"
   },
+  "author": "Nidhish Krishnan <nidhishkrishnan@gmail.com>",
   "license": "MIT"
 }
