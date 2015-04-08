@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.angularjs.org/1.2.16/angular.js"></script>
+  <script src="js/ngSelectBox.js"></script>
+  <script src="js/script.js"></script>
+</head>
+
+<body ng-app="app">
+  <div ng-controller="MainCtrl">
+    <b>ngSelectBox</b>
+
+    <ng-select-box ng-model="livingBeing" width="150px">
+      <ng-option label="- - Select your choice - -" value="?"></ng-option>
+      <ng-optgroup label="{{categories.type}}" value="{{categories}}" ng-repeat="categories in zoo">
+        <ng-option label="{{livingBeing.name}}" value="{{livingBeing}}" selected="{{livingBeing.name ==='Dog' ? 'true' : 'false'}}" image="{{livingBeing.img}}" text-color="{{categories.type==='Animals'? 'red' : 'blue'}}" ng-repeat="livingBeing in categories.list"></ng-option>
+      </ng-optgroup>
+    </ng-select-box>
+    <br>
+
+    <b>Classic Select Box</b> (Down)
+    <li>Cannot add Images</li>
+    <li>Cannot Select the Option Header</li>
+    <li>No Text Styling Feature</li>
+    <br>
+    <select ng-model="livingBeing">
+      <option value="0">- - Select your choice - -</option>
+      <optgroup label="{{categories.type}}" ng-repeat="categories in zoo">
+        <option label="{{livingBeing.name}}" value="{{livingBeing}}" ng-repeat="livingBeing in categories.list"></option>
+      </optgroup>
+    </select>
+    <br>
+    <br>
+  </div>
+</body>
+</html>
