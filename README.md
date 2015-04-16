@@ -35,7 +35,7 @@ Use the below syntax in your templates:
     
 ## Compared to classic group related drop-down list
 
-* Classic group related drop-down list uses `<optgroup>` for showing up the group header, but the main issue is that users can't select those group header label at any cost, cannot style the text color or add images to options ([Demo](https://jsfiddle.net/gm23gwq5/embedded/result/))
+* Classic group related drop-down list uses `<optgroup>` for showing up the group header, but the main issue is that users can't select those group header label at any cost, cannot style the text color or add images to options ([Demo](https://jsfiddle.net/3awdjutf/embedded/result/))
 
 ## Attributes
 
@@ -83,6 +83,6 @@ Use the below syntax in your templates:
 ## Working Demo
 
 Try out the demo :
-[Demo](http://plnkr.co/edit/YhTXImXdERoVk0Yr8E0z?p=preview)  
+[Demo](http://plnkr.co/edit/kjsK8kIS1cTWrlCOEclZ?p=preview)  
 
 
