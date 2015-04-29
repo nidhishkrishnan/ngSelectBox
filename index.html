@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>ngSelectBox by nidhishkrishnan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">ngSelectBox</h1>
+      <h2 class="project-tagline">ngSelectBox - An Advanced AngularJS directive for drop-down list</h2>
+      <a href="https://github.com/nidhishkrishnan/ngSelectBox" class="btn">View on GitHub</a>
+      <a href="https://github.com/nidhishkrishnan/ngSelectBox/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nidhishkrishnan/ngSelectBox/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="ngselectbox---an-advanced-angularjs-directive-for-drop-down-list" class="anchor" href="#ngselectbox---an-advanced-angularjs-directive-for-drop-down-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>ngSelectBox - An Advanced AngularJS directive for drop-down list</h1>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Users can select the group option header which is the main feature of ngSelectBox</li>
+<li>Dynamic coloring of options, option header.</li>
+<li>Options for Adding images for options and option header.</li>
+<li>Works in all modern browsers (IE9+, Chrome, Firefox, Safari etc.)</li>
+</ul>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>AngularJS v1.2.0+</p>
+
+<h2>
+<a id="how-do-i-add-this-to-my-project" class="anchor" href="#how-do-i-add-this-to-my-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do I add this to my project?</h2>
+
+<p>You can download the minified and unminified version manually from CDN</p>
+
+<pre><code>&lt;script type="text/javascript" src="https://cdn.rawgit.com/nidhishkrishnan/ngSelectBox/master/ngSelectBox.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cdn.rawgit.com/nidhishkrishnan/ngSelectBox/master/ngSelectBox.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Adding <code>ngSelectBox</code> Dependency to your app</p>
+
+<pre><code>// Add ngSelectBox as a dependency to your app
+angular.module('your-app', ['ngSelectBox']);
+</code></pre>
+
+<p>Use the below syntax in your templates:</p>
+
+<pre><code>    &lt;ng-select-box ng-model="livingBeing" width="150px"&gt;
+      &lt;ng-option label="- - Select your choice - -" value="?" selected="true"&gt;&lt;/ng-option&gt;
+      &lt;ng-optgroup label="{{categories.type}}" value="{{categories}}" ng-repeat="categories in zoo"&gt;
+        &lt;ng-option label="{{livingBeing.name}}" value="{{livingBeing}}" image="{{livingBeing.img}}" ng-repeat="livingBeing in categories.list"&gt;&lt;/ng-option&gt;
+      &lt;/ng-optgroup&gt;
+    &lt;/ng-select-box&gt;
+</code></pre>
+
+<h2>
+<a id="compared-to-classic-group-related-drop-down-list" class="anchor" href="#compared-to-classic-group-related-drop-down-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compared to classic group related drop-down list</h2>
+
+<ul>
+<li>Classic group related drop-down list uses <code>&lt;optgroup&gt;</code> for showing up the group header, but the main issue is that users can't select those group header label at any cost, cannot style the text color or add images to options (<a href="https://jsfiddle.net/3awdjutf/embedded/result/">Demo</a>)</li>
+</ul>
+
+<h2>
+<a id="attributes" class="anchor" href="#attributes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Attributes</h2>
+
+<h4>
+<a id="label" class="anchor" href="#label" aria-hidden="true"><span class="octicon octicon-link"></span></a>label</h4>
+
+<ul>
+<li>Accepts String value, eg. "Select any Option"</li>
+<li>For displaying the text for option and option-group</li>
+<li>Applicable for <code>&lt;ng-option&gt;</code> and <code>&lt;ng-optgroup&gt;</code>
+</li>
+<li>Example: For optgroup <code>&lt;ng-optgroup label="- - Select your choice - -"&gt;</code> and for
+option <code>&lt;ng-option label="Cat"&gt;</code>
+</li>
+</ul>
+
+<h4>
+<a id="value" class="anchor" href="#value" aria-hidden="true"><span class="octicon octicon-link"></span></a>value</h4>
+
+<ul>
+<li>Accepts String value, eg. "cat"</li>
+<li>For assigning value for option and option-group</li>
+<li>Applicable for <code>&lt;ng-option&gt;</code> and <code>&lt;ng-optgroup&gt;</code>
+</li>
+<li>Example: For optgroup <code>&lt;ng-optgroup value="0" ...</code> and for
+option <code>&lt;ng-option value="cat" ...</code>
+</li>
+</ul>
+
+<h4>
+<a id="width-optional" class="anchor" href="#width-optional" aria-hidden="true"><span class="octicon octicon-link"></span></a>width (optional)</h4>
+
+<ul>
+<li>Accepts String value, eg. 150px</li>
+<li>For increasing the width of the select box</li>
+<li>Applicable for <code>&lt;ng-select-box&gt;</code> only</li>
+<li>Example: <code>&lt;ng-select-box width="150px"...</code>
+</li>
+</ul>
+
+<h4>
+<a id="selected-optional" class="anchor" href="#selected-optional" aria-hidden="true"><span class="octicon octicon-link"></span></a>selected (optional)</h4>
+
+<ul>
+<li>Accepts bollean value, eg. true or false</li>
+<li>For selecting a particular option or option-group</li>
+<li>Applicable for <code>&lt;ng-option&gt;</code> and <code>&lt;ng-optgroup&gt;</code>
+</li>
+<li>Example: For optgroup <code>&lt;ng-optgroup selected="true" ...</code> and for
+option <code>&lt;ng-option selected="true" ...</code>
+</li>
+</ul>
+
+<h4>
+<a id="image-optional" class="anchor" href="#image-optional" aria-hidden="true"><span class="octicon octicon-link"></span></a>image (optional)</h4>
+
+<ul>
+<li>Accepts String value, eg. "cat.png"</li>
+<li>For adding images for a particular option or option-group</li>
+<li>Applicable for <code>&lt;ng-option&gt;</code> and <code>&lt;ng-optgroup&gt;</code>
+</li>
+<li>Example: For optgroup <code>&lt;ng-optgroup image="cat.png" ...</code> and for
+option <code>&lt;ng-option image="cat.png" ...</code>
+</li>
+</ul>
+
+<h4>
+<a id="text-color-optional" class="anchor" href="#text-color-optional" aria-hidden="true"><span class="octicon octicon-link"></span></a>text-color (optional)</h4>
+
+<ul>
+<li>Accepts String value, eg. "red"</li>
+<li>For applying colors for a particular option text or option-group text</li>
+<li>Applicable for <code>&lt;ng-option&gt;</code> and <code>&lt;ng-optgroup&gt;</code>
+</li>
+<li>Example: For optgroup <code>&lt;ng-optgroup text-color="red" ...</code> and for
+option <code>&lt;ng-option text-color="red" ...</code>
+</li>
+</ul>
+
+<h2>
+<a id="working-demo" class="anchor" href="#working-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working Demo</h2>
+
+<p>Try out the demo :
+<a href="http://embed.plnkr.co/UrmTq5N7uhkHhg575cOm/preview">Demo</a>  </p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+
+<h2>
+<a id="contributions" class="anchor" href="#contributions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributions</h2>
+
+<p>Contributions are very welcome! Please contact me to discuss: <a href="mailto:nidhishkrishnan@gmail.com">nidhishkrishnan@gmail.com</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nidhishkrishnan/ngSelectBox">ngSelectBox</a> is maintained by <a href="https://github.com/nidhishkrishnan">nidhishkrishnan</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
