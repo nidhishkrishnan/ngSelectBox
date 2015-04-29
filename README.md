@@ -83,6 +83,14 @@ Use the below syntax in your templates:
 ## Working Demo
 
 Try out the demo :
-[Demo](http://plnkr.co/edit/kjsK8kIS1cTWrlCOEclZ?p=preview)  
+[Demo](http://embed.plnkr.co/UrmTq5N7uhkHhg575cOm/preview)  
+
+## License
+
+MIT
+
+## Contributions
+
+Contributions are very welcome! Please contact me to discuss: nidhishkrishnan@gmail.com
 
 
