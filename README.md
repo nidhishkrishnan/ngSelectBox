@@ -89,10 +89,6 @@ Try out the demo :
 
 MIT
 
-##website
-
- [ngSelectBox](http://nidhishkrishnan.github.io/ngSelectBox)
-
 ## Contributions
 
 Contributions are very welcome! Please contact me to discuss: nidhishkrishnan@gmail.com
